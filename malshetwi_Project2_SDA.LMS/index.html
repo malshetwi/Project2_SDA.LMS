@@ -1,0 +1,295 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <!-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" /> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+     <!--JS's-->
+    <script src="Assets/JS_Files/JS_login.js"></script><!--loginJS-->
+    <script src="Assets/JS_Files/Search.js"></script><!--SearchJS-->
+    <script src="Assets/JS_Files/store.js"></script><!--CARTJS-->
+    <!-->
+
+    <link rel="stylesheet" href="Assets/CSS.css"/> 
+    <title>M Sh Restaurant</title>
+    <link href="Assets/Images/icon-restaurant.png" rel="shortcut icon"/>
+    
+    
+    <!--ToCartBtnCss-->
+    <style>
+    
+#myBtn {
+   position: fixed;
+  bottom: 20px;
+  right: 40px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color:#092442;
+  color:#b7b8af;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+  width:62px
+}
+
+#myBtn:hover {
+  background-color: #194372;
+}
+</style>
+</head>
+<body style="background-color:#e0e0de;">
+<div class="row" style="background-color:#b7b8af">
+<div class="container"><br>
+<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><img  class="CurveBorders" alt="logo" height="150" width="150" src="Assets/Images/icon-restaurant.png"/></div>
+<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"><h1>M Sh Restaurant</h1></div></div><br></div>
+
+<div class="container"><!--BodyContainer-->
+<ul class="nav nav-tabs">
+<li><a class="navtext" href="#Pasta" data-toggle="tab" >Pasta</a></li>
+<li><a class="navtext" href="#Pizza" data-toggle="tab">Pizza</a></li>
+<li><a class="navtext" href="#Burger" data-toggle="tab">Burger</a></li>
+<li><a class="navtext" href="#Rice" data-toggle="tab">Rice</a></li>
+<li><a class="navtext" href="#OrderHere" data-toggle="tab">Order here</a></li>
+<li><a class="navtext" href="#about" data-toggle="tab">About</a></li>
+<li><a class="navtext" href="#ChangePass" data-toggle="tab">Change Password</a></li>
+<li><a class="navtext" href="#ToSearch"  data-toggle="tab"><input class="form-control mr-sm-2"  type="text" id="myInput" onkeyup="Search()" placeholder="By Meal name ...">&nbsp;</a></li>
+<li><h4>&nbsp;&nbsp;|&nbsp;</h4></li>
+<li><a href="login.html" style="color:crimson; font-size:large"> Logout</a></li>
+
+</ul>
+ 
+<div class="row"><br>
+
+<div class="tab-content">
+
+<div id="Pasta" class="tab-pane fade">
+<table class="table-bordered">
+	<tr>
+		<th>Pasta</th>
+	</tr>
+	<tr>
+		<td><img  class="FoodImages" src="Assets/Images/pasta.jpg" alt="Pene" title="pene 8$" ></td>
+		<td><img  class="FoodImages" src="Assets/Images/spaghetti.jpg" alt="spaghetti" title="spaghetti 9$" ></td>
+	</tr>
+	<tr>
+		<td><b>Pasta Pene </b>ــــ Price: 8 $ </td>
+		<td><b>Pasta Spaghetti </b>ــــ Price: 9 $</td>
+		</tr>
+		</table></div><!--EndOfDiv_Pizza_Content-->
+ 
+
+<div id="Pizza" class="tab-pane fade">
+<table class="table-bordered" >
+	<tr>
+	<th>Pizza</th>
+	</tr>
+	    <tr>
+		<td><img class="FoodImages"src="Assets/Images/Pizza.png" alt="cheese Pizza" title="cheese Pizza 10$"></td>
+		<td><img class="FoodImages"src="Assets/Images/pepperoni.jpg" alt="pepperoni" title="pepperoni 11$"></td>
+		</tr>
+	    <tr>
+		<td><b>Cheese Pizza </b>ــــ Price: 10 $ </td>
+		<td><b>pepperoni Pizza </b>ــــ Price: 11 $ </td>
+		</tr>
+</table></div><!--EndPizza-->
+
+<div id="Burger" class="tab-pane fade">
+<table class="table-bordered" >
+	<tr>
+	<th>Burger's</th>
+	</tr>
+	    <tr>
+		<td><img class="FoodImages"src="Assets/Images/Burger.jpg" alt="Beef Burger" title="Beef Burger 6$"></td>
+		<td><img class="FoodImages"src="Assets/Images/Chicken-Burgers.jpg" alt="Chicken Burger" title="Chicken Burger 5$"></td>
+		</tr>
+	    <tr>
+		<td><b>Beef Burger </b>ــــ Price: 6 $ </td>
+		<td><b>Chicken Burger </b>ــــ Price: 5 $ </td>
+		</tr>
+</table></div><!--EndBurger-->
+
+<div id="Rice" class="tab-pane fade">
+<table class="table-bordered" >
+	<tr>
+	<th>Rice</th>
+	</tr>
+	    <tr>
+		<td><img class="FoodImages"src="Assets/Images/chicken-and-rice.jpg" alt="Rice and Chicken" title="Rice and Chicken 12$"></td>
+		<td><img class="FoodImages"src="Assets/Images/Rice-with-Meat.jpg" alt="Rice and Meat" title="Rice and Meat 14$"></td>
+		</tr>
+	    <tr>
+		<td><b>Rice with Chicken </b>ــــ Price: 12 $ </td>
+		<td><b>Rice with Meat </b>ــــ Price: 14 $ </td>
+		</tr>
+</table></div><!--EndRice-->
+
+<div id="ChangePass" class="tab-pane fade"> <!--ChangePass-->
+<form>
+<div class="col-lg-4">
+<h1>Change Password</h1>
+<div class="jumbotron">
+
+<input id="NPassword" type="password" placeholder="Password"><br><br>
+<button class="btn btn-primary" id="ChangePassword" onclick="ChangePss()">Change Password</button>
+
+
+
+</div>
+</div>
+</form>
+</div><!--EndChangePass-->
+
+
+<div id="about" class="tab-pane fade"> <!--About-->
+<h1>This WebApp for</h1><hr><h3>SDA_simplilearn Assessment Project2, Phase2:(Kitchen Story)</h3><br>
+<h1>Github Project Repository</h1><hr><h3><a onclick="javascript:window.open('https://github.com/malshetwi/Project2_SDA.LMS')">malshetwi/Project2_SDA.LMS</a></h3><br></div><!--EndAbout-->
+
+<div id="OrderHere" class="tab-pane fade"> <!--OrderHere-->
+
+
+<div class="container"> <!--OrderHere-->
+<a href="#ToCart"><button id="myBtn" title="To Cart">To Cart</button></a>
+            <h2 class="section-header">MENU</h2>
+            <div class="shop-items">
+            <table class="table">
+                       <tr>
+                       <th>Food Name</th>
+                       <th>Meal Photo</th>
+                       <th>Price</th>
+                       </tr>
+  
+		                <tr class="shop-item">
+						<td><span class="shop-item-title">Pene</span></td>
+						<td><img class="shop-item-image" style="height:155px;width:155px" src="Assets/Images/pasta.jpg"/></td>
+						<td class="shop-item-details">
+                        <span class="shop-item-price">$8</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button></td>
+                        </tr><!-->
+					    <tr class="shop-item">
+						<td><span class="shop-item-title">Spaghetti</span></td>
+						<td><img class="shop-item-image" style="height:155px;width:155px" src="Assets/Images/spaghetti.jpg"/></td>
+						<td class="shop-item-details">
+						<span class="shop-item-price">$9</span>
+                        <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button></td>
+                        </tr>
+                        
+                        
+                        <tr class="shop-item">
+						<td><span class="shop-item-title">Cheese Pizza</span></td>
+						<td><img class="shop-item-image" style="height:155px;width:155px" src="Assets/Images/Pizza.png"/></td>
+						<td class="shop-item-details">
+						<span class="shop-item-price">$10</span>
+                        <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button></td>
+                        </tr> <!-->                       
+                        <tr class="shop-item">
+						<td><span class="shop-item-title">Pepperoni</span></td>
+						<td><img class="shop-item-image" style="height:155px;width:155px" src="Assets/Images/pepperoni.jpg"/></td>
+						<td class="shop-item-details">
+						<span class="shop-item-price">$11</span>
+                        <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button></td>
+                        </tr>
+                        
+                        
+                        <tr class="shop-item">
+						<td><span class="shop-item-title">Beef Burger</span></td>
+						<td><img class="shop-item-image" style="height:155px;width:155px" src="Assets/Images/Burger.jpg"/></td>
+						<td class="shop-item-details">
+						<span class="shop-item-price">$6</span>
+                        <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button></td>
+                        </tr> <!-->                       
+                        <tr class="shop-item">
+						<td><span class="shop-item-title">Chicken Burger</span></td>
+						<td><img class="shop-item-image" style="height:155px;width:155px" src="Assets/Images/Chicken-Burgers.jpg"/></td>
+						<td class="shop-item-details">
+						<span class="shop-item-price">$5</span>
+                        <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button></td>
+                        </tr>
+
+                        
+                        <tr class="shop-item">
+						<td><span class="shop-item-title">Rice and Chicken</span></td>
+						<td><img class="shop-item-image" style="height:155px;width:155px" src="Assets/Images/chicken-and-rice.jpg"/></td>
+						<td class="shop-item-details">
+						<span class="shop-item-price">$12</span>
+                        <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button></td>
+                        </tr> <!-->                       
+                        <tr class="shop-item">
+						<td><span class="shop-item-title">Rice and Meat</span></td>
+						<td><img class="shop-item-image" style="height:155px;width:155px" src="Assets/Images/Rice-with-Meat.jpg"/></td>
+						<td class="shop-item-details">
+						<span class="shop-item-price">$14</span>
+                        <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button></td>
+                        </tr>
+                        
+                        
+				  </table></div>
+     <hr>
+
+            <h2 class="section-header" id="ToCart">CART</h2>
+            <div class="cart-row">
+            </div>
+            <div class="cart-items">
+            </div>
+            <div class="cart-total">
+                <strong class="cart-total-title">Total</strong>
+                <span class="cart-total-price">$0</span>
+            </div>
+            <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button><br>
+            </div>
+<br>
+</div><!--EndOrderHere-->
+
+<div id="ToSearch" class="tab-pane fade"> <!--Search-->
+
+<table id="myTable" class="table">
+  <tr>
+    <th>Food Name</th>
+    <th>Meal Photo</th>
+    <th>Price</th>
+  </tr>
+  
+     <tr><td>Pasta Pene</td>
+     <td><img  class="SearchFoodImages" src="Assets/Images/pasta.jpg" alt="Pene" title="pene 8$" ></td>
+     <td>8$</td></tr>
+    
+    <tr><td>Pasta spaghetti</td>
+    <td><img  class="SearchFoodImages" src="Assets/Images/spaghetti.jpg" alt="spaghetti" title="spaghetti 9$" ></td>
+    <td>9$</td></tr>
+  
+    <tr><td>cheese Pizza</td>
+    <td><img class="SearchFoodImages"src="Assets/Images/Pizza.png" alt="cheese Pizza" title="cheese Pizza 10$"></td>
+    <td>10$</td></tr>
+    
+    <tr><td>pepperoni</td>
+    <td><img class="SearchFoodImages"src="Assets/Images/pepperoni.jpg" alt="pepperoni" title="pepperoni 11$"></td>
+    <td>11$</td></tr>
+    
+    <tr><td>Beef Burger</td>
+    <td><img class="SearchFoodImages"src="Assets/Images/Burger.jpg" alt="Beef Burger" title="Beef Burger 6$"></td>
+    <td>6$</td></tr>
+    
+    <tr><td>Chicken Burger</td>
+    <td><img class="SearchFoodImages"src="Assets/Images/Chicken-Burgers.jpg" alt="Chicken Burger" title="Chicken Burger 5$"></td>
+    <td>5$</td></tr>
+    
+    <tr><td>Rice and Chicken</td>
+    <td><img class="SearchFoodImages"src="Assets/Images/chicken-and-rice.jpg" alt="Rice and Chicken" title="Rice and Chicken 12$"></td>
+    <td>12$</td></tr>
+    
+    <tr><td>Rice and Meat</td>
+    <td><img class="SearchFoodImages"src="Assets/Images/Rice-with-Meat.jpg" alt="Rice and Meat" title="Rice and Meat 14$"></td>
+    <td>14$</td></tr>
+    </table></div><!--EndSearch-->
+
+
+</div></div><!--EndOfDivTapContent-->
+</div><!--EndContainer-->
+ </body>
+
+</html>
